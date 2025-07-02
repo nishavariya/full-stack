@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/contactform", {
+mongoose.connect("mongodb+srv://nishavariya2024katargam:<db_password>@cluster0.dvzvo9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/contactform", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
