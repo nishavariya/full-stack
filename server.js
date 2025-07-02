@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://nishavariya2024katargam:<5XS8OrEgar7dnwqF>@cluster0.dvzvo9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/contactform", {
+mongoose.connect("mongodb+srv://nishavariya2024katargam:5XS8OrEgar7dnwqF@cluster0.dvzvo9k.mongodb.net/contactform", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
