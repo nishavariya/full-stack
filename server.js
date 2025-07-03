@@ -14,17 +14,17 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://nishavariya2024katargam:5XS8OrEgar7dnwqF@cluster0.dvzvo9k.mongodb.net/contactform", {
+mongoose.connect("mongodb+srv://nishavariya2024katargam:<db_password>@cluster0.pcxdnir.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/contactform", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log("MongoDB connected"))
-.catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
 app.use('/contect', contactRoutes);
-app.use('/api/appointments', appointmentRoutes); 
-app.use('/footer', footerRoutes); 
+app.use('/api/appointments', appointmentRoutes);
+app.use('/footer', footerRoutes);
 
 // Start server
 app.listen(PORT, () => {
