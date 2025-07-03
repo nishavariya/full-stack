@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const contactRoutes = require("./routes/contect");
-const appointmentRoutes = require("./routes/appointment");
-const footerRoutes = require("./routes/footer");
+// const contactRoutes = require("./routes/contect");
+// const appointmentRoutes = require("./routes/appointment");
+// const footerRoutes = require("./routes/footer");
 
 const app = express();
 const PORT = 5000;
@@ -20,6 +20,10 @@ mongoose.connect("mongodb+srv://nishavariya2024katargam:RcOrtC3QlgluOs2B@cluster
 })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
+
+ const contactRoutes = require("./routes/contect");
+const appointmentRoutes = require("./routes/appointment");
+const footerRoutes = require("./routes/footer");
 
 // Routes
 app.use('/contect', contactRoutes);
