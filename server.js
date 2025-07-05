@@ -14,7 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://nisha:nisha2007@cluster0.1stireb.mongodb.net/Formdata")
+mongoose.connect("mongodb+srv://nisha:nisha2007@cluster0.1stireb.mongodb.net/Formdata",{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
