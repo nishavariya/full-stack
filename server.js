@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://nisha:nisha2007@cluster0.1stireb.mongodb.net/For
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Routes
-app.use('/contect', contactRoutes);
+app.use('/api/contect', contactRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/footer', footerRoutes);
 
